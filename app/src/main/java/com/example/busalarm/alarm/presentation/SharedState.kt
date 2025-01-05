@@ -1,7 +1,7 @@
-package com.example.busalarm.alarm.presentation.alarm_list
+package com.example.busalarm.alarm.presentation
 
 import com.example.busalarm.alarm.domain.Alarm
 
-data class AlarmListState(
+data class SharedState(
     val alarms: List<Alarm> = emptyList()
 )

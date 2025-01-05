@@ -1,9 +1,10 @@
 package com.example.busalarm.alarm.domain
 
 data class Bus(
-    val id: Int,
+    val id: Int, // bus id
     val startStation: String,
     val endStation: String,
-    val startTime: Long,
-    val endTime: Long,
+    val startTime: Int,
+    val duration: Int,
+    val desTime: Int
 )
