@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BusAlarm"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDJALVEq2ezxkG62Xc9Ynkj5wqZ-IWzzRk" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

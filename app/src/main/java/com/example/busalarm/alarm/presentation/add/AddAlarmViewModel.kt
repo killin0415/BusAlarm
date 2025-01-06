@@ -26,9 +26,7 @@ class AddAlarmViewModel : ViewModel() {
 
     fun onAction(action: AddAction) {
         when (action) {
-            is AddAction.onDeleteClick -> {
-
-            }
+            is AddAction.onDeleteClick -> { }
 
             is AddAction.onDoneClick -> {
                 _state.update {

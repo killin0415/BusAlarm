@@ -17,6 +17,7 @@ ksp = "2.0.20-1.0.24"
 wheelpickercompose = "1.1.11"
 navigationCompose = "2.8.4"
 playServicesLocation = "21.3.0"
+playServicesMaps = "19.0.0"
 
 
 
@@ -63,6 +64,7 @@ wheelpickercompose = { module = "com.github.commandiron:WheelPickerCompose", ver
 
 accompanist-permissions = {group = "com.google.accompanist", name = "accompanist-permissions", version = "0.34.0"}
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
