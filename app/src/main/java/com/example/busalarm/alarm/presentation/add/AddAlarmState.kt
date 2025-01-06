@@ -4,9 +4,9 @@ import com.example.busalarm.alarm.domain.Alarm
 import java.time.LocalTime
 
 data class AddAlarmState(
-    val nameInp: String = "",
-    val timeInp: LocalTime = LocalTime.now(),
-    val destinationInp: String = "",
+    val nameInp: String = "起床",
+    val timeInp: LocalTime = LocalTime.of(13, 30),
+    val destinationInp: String = "有吉可樂",
     val alarm: Alarm = Alarm(),
     val isNew: Boolean = true
 )

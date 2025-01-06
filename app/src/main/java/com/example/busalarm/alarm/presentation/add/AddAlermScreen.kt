@@ -71,6 +71,7 @@ fun AddAlarmScreen(
             verticalArrangement = Arrangement.spacedBy(32.dp, Alignment.CenterVertically)
         ) {
             WheelTimePicker(
+                startTime = state.alarm.time,
                 timeFormat = TimeFormat.AM_PM,
                 size = DpSize(256.dp, 172.dp),
                 rowCount = 5

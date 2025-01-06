@@ -4,5 +4,6 @@ import com.example.busalarm.alarm.domain.Alarm
 import com.example.busalarm.alarm.domain.Bus
 
 data class BusListState(
-    val busList: List<Bus> = emptyList()
+    val alarm: Alarm = Alarm(),
+    val busList: Map<String, List<Bus>> = emptyMap()
 )

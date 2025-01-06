@@ -27,8 +27,7 @@ fun AlarmList(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         items(
-            items = alarms,
-            key = {it.name}
+            items = alarms
         ) { alarm ->
             AlarmItem(
                 alarm = alarm,

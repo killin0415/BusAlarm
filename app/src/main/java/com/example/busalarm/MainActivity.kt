@@ -166,6 +166,10 @@ class MainActivity : ComponentActivity() {
                                         )
                                         SettingScreen(
                                             viewModel,
+                                            onBackClick = {
+                                                selectedItemIndex = 0
+                                                navController.navigate(Route.Home)
+                                            },
                                             modifier = Modifier
                                                 .fillMaxWidth()
                                                 .height(IntrinsicSize.Min)

@@ -20,10 +20,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import com.example.busalarm.alarm.domain.Bus
+import com.example.busalarm.alarm.presentation.utils.convertIntToTimeString
+import com.example.busalarm.alarm.presentation.utils.convertToMin
 
 @Composable
 fun BusListItem(
@@ -43,20 +46,24 @@ fun BusListItem(
             Column(
                 modifier = Modifier
                     .fillMaxHeight()
+                    .width(IntrinsicSize.Min)
                     .padding(16.dp),
                 verticalArrangement = Arrangement.SpaceBetween,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
                     text = bus.startStation,
+                    textAlign = TextAlign.Center,
                     style = MaterialTheme.typography.titleMedium
                 )
                 Text(
-                    text = bus.startTime.toString(),
+                    text = convertIntToTimeString(bus.startTime),
+                    textAlign = TextAlign.Center,
                     style = MaterialTheme.typography.displayMedium
                 )
                 Text(
-                    text = "${bus.startTime - curTime} min",
+                    text = convertToMin(bus.startTime - curTime),
+                    textAlign = TextAlign.Center,
                     style = MaterialTheme.typography.titleSmall
                 )
             }
@@ -64,12 +71,14 @@ fun BusListItem(
             Column(
                 modifier = Modifier
                     .fillMaxHeight()
+                    .width(IntrinsicSize.Min)
                     .padding(16.dp),
                 verticalArrangement = Arrangement.SpaceBetween,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
                     text = bus.id.toString(),
+                    textAlign = TextAlign.Center,
                     style = MaterialTheme.typography.titleMedium
                 )
                 Icon(
@@ -77,27 +86,32 @@ fun BusListItem(
                     contentDescription = null,
                 )
                 Text(
-                    text = bus.duration.toString(),
+                    text = convertToMin(bus.duration),
+                    textAlign = TextAlign.Center,
                     style = MaterialTheme.typography.titleSmall
                 )
             }
             Column(
                 modifier = Modifier
                     .fillMaxHeight()
+                    .width(IntrinsicSize.Min)
                     .padding(16.dp),
                 verticalArrangement = Arrangement.SpaceBetween,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
                     text = bus.endStation,
+                    textAlign = TextAlign.Center,
                     style = MaterialTheme.typography.titleMedium
                 )
                 Text(
-                    text = (bus.startTime + bus.duration).toString(),
+                    text = convertIntToTimeString(bus.startTime + bus.duration),
+                    textAlign = TextAlign.Center,
                     style = MaterialTheme.typography.displayMedium
                 )
                 Text(
-                    text = "${bus.desTime - bus.startTime - bus.duration} min",
+                    text = convertToMin(bus.desTime - bus.startTime - bus.duration),
+                    textAlign = TextAlign.Center,
                     style = MaterialTheme.typography.titleSmall
                 )
             }

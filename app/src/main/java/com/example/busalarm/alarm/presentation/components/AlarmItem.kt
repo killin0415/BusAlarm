@@ -18,6 +18,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.busalarm.alarm.domain.Alarm
+import com.example.busalarm.alarm.presentation.utils.convertIntToTimeString
 import com.example.busalarm.alarm.presentation.utils.convertTimeToString
 import com.example.busalarm.core.presentation.DarkBlue
 
@@ -49,7 +50,7 @@ fun AlarmItem(
                 modifier = textModifier
             )
             Text(
-                convertTimeToString(alarm.time),
+                convertIntToTimeString(alarm.time.toSecondOfDay()),
                 style = MaterialTheme.typography.headlineLarge,
                 fontFamily = FontFamily.SansSerif,
                 modifier = textModifier

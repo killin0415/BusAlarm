@@ -119,6 +119,7 @@ fun HomeScreen(
                     navController.navigateUp()
                 } else {
                     val viewModel = koinViewModel<BusListViewModel>()
+                    viewModel.update(alarm)
                     BusListScreenRoot(
                         viewModel = viewModel,
                         alarm = alarm,

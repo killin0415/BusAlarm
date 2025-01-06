@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -25,6 +26,7 @@ import org.koin.androidx.compose.koinViewModel
 @Composable
 fun SettingScreen(
     viewModel: MainViewModel = koinViewModel(),
+    onBackClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Row (

@@ -53,10 +53,10 @@ fun BusListScreen(
     onEditClick: (alarmName: String) -> Unit,
     onBackClick: () -> Unit
 ) {
-    val busList = state.busList
+    val busList = state.busList[alarm.name]!!
     val scrollState = rememberLazyListState()
     Scaffold(
-        modifier = Modifier.fillMaxSize().padding(start = 16.dp),
+        modifier = Modifier.fillMaxSize().padding(start = 4.dp),
         topBar = {
             TopAppBar(
                 title = {
@@ -95,12 +95,11 @@ fun BusListScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             items(
-                items = busList,
-                key = { it.id }
+                items = busList
             ) { bus ->
                 BusListItem(
                     bus = bus,
-                    curTime = LocalTime.now().toSecondOfDay()
+                    curTime = alarm.time.toSecondOfDay()
                 )
             }
         }
